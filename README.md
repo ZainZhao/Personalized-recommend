@@ -25,7 +25,10 @@
 模型百度云链接：https://pan.baidu.com/s/1y03hHrEZio57xUqh33SJtA 
 提取码：6xpt 
 
+答辩视频百度云链接：https://pan.baidu.com/s/1uA56DtKXR-BVWR6hPScu2A 
+提取码：yzz4  
 
+答辩视频B站链接：https://www.bilibili.com/video/av50273502/
 
 - 项目背景
 
