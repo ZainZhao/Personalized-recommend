@@ -22,7 +22,7 @@
 
 模型百度云链接：https://pan.baidu.com/s/1y03hHrEZio57xUqh33SJtA 
 提取码：6xpt 
-
+![cnn网络图](https://github.com/Missyanc/CatVsDog/blob/master/iamges/net.png?raw=true)
 
 
 - 项目背景
