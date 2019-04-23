@@ -2,7 +2,7 @@
 
 > 大数据班 软工1608班 20165277 赵煜
 
-## 项目文件夹简介：
+## 项目简介：
 
 - [dl_re_web](https://github.com/ZainZhao/Personalized-recommend/tree/master/dl_re_web) :   Web 项目的文件夹
 - [re_sys](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys)： Web app
