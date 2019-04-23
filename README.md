@@ -9,14 +9,14 @@
   - [model](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/model)：百度云下载之后，把model放到该文件夹下
   - [[recommend](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/recommend)]： 网络模型相关
     - [data](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/recommend/data)： 训练数据集
-    - [DateSet.py](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/recommend/DateSet.py)：数据集加载相关
+    - [DataSet.py](https://github.com/ZainZhao/Personalized-recommend/blob/master/re_sys/recommend/DataSet.py)
     - [re_model.py](https://github.com/ZainZhao/Personalized-recommend/blob/master/re_sys/recommend/re_model.py)： 网络模型类
     - [utils.py](https://github.com/ZainZhao/Personalized-recommend/blob/master/re_sys/recommend/utils.py)：工具、爬虫
 - [static](https://github.com/ZainZhao/Personalized-recommend/tree/master/static) ：Web 页面静态资源
 - [templates](https://github.com/ZainZhao/Personalized-recommend/tree/master/templates) ： 为 Web 页面的 Html 页面
-- [venv](https://github.com/ZainZhao/Personalized-recommend/tree/master/templates/venv) ：Django 项目资源文件夹
+- [venv](https://github.com/ZainZhao/Personalized-recommend/tree/master/venv)：Django 项目资源文件夹
 - [db.sqlite3](https://github.com/ZainZhao/Personalized-recommend/tree/master/db.sqlite3) ： Django 自带的数据库
-- [manage.py](https://github.com/ZainZhao/Personalized-recommend/tree/master/templates/manage.py) ： Django 执行脚本
+- [manage.py](https://github.com/ZainZhao/Personalized-recommend/blob/master/manage.py)： Django 执行脚本
 
 
 
