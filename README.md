@@ -8,8 +8,8 @@
 - [re_sys](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys)： Web app
   - [model](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/model)：百度云下载之后，把model放到该文件夹下
   - [recommend](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/recommend)： 网络模型相关
-    - [data](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/recommend/data)： 训练数据集
-    - [DataSet.py](https://github.com/ZainZhao/Personalized-recommend/blob/master/re_sys/recommend/DataSet.py)
+    - [data](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/recommend/data)： 训练数据集文件夹
+    - [DataSet.py](https://github.com/ZainZhao/Personalized-recommend/blob/master/re_sys/recommend/DataSet.py)：数据集加载相关
     - [re_model.py](https://github.com/ZainZhao/Personalized-recommend/blob/master/re_sys/recommend/re_model.py)： 网络模型类
     - [utils.py](https://github.com/ZainZhao/Personalized-recommend/blob/master/re_sys/recommend/utils.py)：工具、爬虫
 - [static](https://github.com/ZainZhao/Personalized-recommend/tree/master/static) ：Web 页面静态资源
@@ -23,9 +23,7 @@
 模型百度云链接：https://pan.baidu.com/s/1y03hHrEZio57xUqh33SJtA 
 提取码：6xpt 
 
-![cnn网络图](https://github.com/Missyanc/CatVsDog/blob/master/iamges/net.png?raw=true)
 
-![cnn网络图](https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/net_model.png?raw=true)
 
 - 项目背景
 
@@ -41,7 +39,7 @@
 
 - 网络模型
 
-<img src="http://github.com/ZainZhao/git-images/raw/master/deep_learning/net_model.png" width=1400 />
+<img src="https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/net_model.png?raw=true" width=1400 />
 
 ##  一.  数据处理
 
@@ -304,9 +302,9 @@ train_op = optimizer.apply_gradients(gradients, global_step=global_step)
 
 - 损失图像
 
-![1](http://github.com/ZainZhao/git-images/raw/master/deep_learning/training_loss.png)
+![1](https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/training_loss.png?raw=true)
 
-![1](http://github.com/ZainZhao/git-images/raw/master/deep_learning/test_loss.png)
+![1](https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/test_loss.png?raw=true)
 
 - 经过简单的调参。`batch_size` 对Loss的影响较大，但是`batch_size` 过大，损失会有比较大的抖动情况。随着学习率逐渐减小，损失会先减小后增大，所以最终确定参数还是原作者的固定参数效果较好。
 
@@ -340,26 +338,26 @@ train_op = optimizer.apply_gradients(gradients, global_step=global_step)
 
 ### 2.  展示截图
 
-- ![1](http://github.com/ZainZhao/git-images/raw/master/deep_learning/web_0.png)
+- ![1](https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/web_0.png?raw=true)
 
 
 
-- ![1](http://github.com/ZainZhao/git-images/raw/master/deep_learning/web_1.png)
+- ![1](https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/web_1.png?raw=true)
 
 - 后台推荐结果
 
   ​     给用户推荐喜欢的电影
 
 
-![1](http://github.com/ZainZhao/git-images/raw/master/deep_learning/result_0.png)
+![1](https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/result_0.png?raw=true)
 
 ​		推荐相似的电影
 
-![1](http://github.com/ZainZhao/git-images/raw/master/deep_learning/result_1.png)
+![1](https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/result_1.png?raw=true)
 
  	     推荐看过的用户还喜欢看的电影
 
-![1](http://github.com/ZainZhao/git-images/raw/master/deep_learning/result_2.png)
+![1](https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/result_2.png?raw=true)
 
 
 
@@ -377,21 +375,23 @@ train_op = optimizer.apply_gradients(gradients, global_step=global_step)
 
 以下是我的推导手稿截图：
 
-<img src="http://github.com/ZainZhao/git-images/raw/master/deep_learning/model_1.jpg" width=500 />
 
-<img src="http://github.com/ZainZhao/git-images/raw/master/deep_learning/model_2.jpg" width=500 />
+
+<img src="https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/model_1.jpg?raw=true" width=500 />
+
+<img src="https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/model_2.jpg?raw=true" width=500 />
 
 <img src="http://github.com/ZainZhao/git-images/raw/master/deep_learning/model_3.jpg" width=500 />
 
-<img src="http://github.com/ZainZhao/git-images/raw/master/deep_learning/model_4.jpg" width=500 />
+<img src="https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/model_4.jpg?raw=true" width=500 />
 
 <img src="http://github.com/ZainZhao/git-images/raw/master/deep_learning/model_5.jpg" width=500 />
 
-<img src="http://github.com/ZainZhao/git-images/raw/master/deep_learning/model_5.jpg" width=500 />
+<img src="https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/model_6.jpg?raw=true" width=500 />
 
 <img src="http://github.com/ZainZhao/git-images/raw/master/deep_learning/model_6.jpg" width=500 />
 
-<img src="http://github.com/ZainZhao/git-images/raw/master/deep_learning/model_7.jpg" width=500 />
+<img src="https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/model_7.jpg?raw=true" width=500 />
 
 ## 五. 参考文献
 
