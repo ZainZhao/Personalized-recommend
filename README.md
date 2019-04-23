@@ -7,7 +7,7 @@
 - [dl_re_web](https://github.com/ZainZhao/Personalized-recommend/tree/master/dl_re_web) :   Web 项目的文件夹
 - [re_sys](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys)： Web app
   - [model](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/model)：百度云下载之后，把model放到该文件夹下
-  - [[recommend](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/recommend)]： 网络模型相关
+  - [recommend](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/recommend)： 网络模型相关
     - [data](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/recommend/data)： 训练数据集
     - [DataSet.py](https://github.com/ZainZhao/Personalized-recommend/blob/master/re_sys/recommend/DataSet.py)
     - [re_model.py](https://github.com/ZainZhao/Personalized-recommend/blob/master/re_sys/recommend/re_model.py)： 网络模型类
