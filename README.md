@@ -67,7 +67,7 @@
 
 ### 2. 处理后的数据
 
-![1](http://github.com/ZainZhao/git-images/raw/master/deep_learning/data.png)
+![1](https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/data.png?raw=true)
 
 > 我们看到部分字段是类型性变量，如 UserID、MovieID 这样非常稀疏的变量，如果使用 `one-hot`，那么数据的维度会急剧膨胀，算法的效率也会大打折扣。
 
