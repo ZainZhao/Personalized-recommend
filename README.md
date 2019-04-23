@@ -1,17 +1,27 @@
-# Personalized-recommend
 # dl-re-movies
 
 > 大数据班 软工1608班 20165277 赵煜
 
-## 项目文件夹目录介绍：
+## 项目文件夹简介：
+
+- [dl_re_web](https://github.com/ZainZhao/Personalized-recommend/tree/master/dl_re_web) :   Web 项目的文件夹
+- [re_sys](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys)： Web app
+  - [model](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/model)：百度云下载之后，把model放到该文件夹下
+  - [[recommend](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/recommend)]： 网络模型相关
+    - [data](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/recommend/data)： 训练数据集
+    - [DateSet.py](https://github.com/ZainZhao/Personalized-recommend/tree/master/re_sys/recommend/DateSet.py)：数据集加载相关
+    - [re_model.py](https://github.com/ZainZhao/Personalized-recommend/blob/master/re_sys/recommend/re_model.py)： 网络模型类
+    - [utils.py](https://github.com/ZainZhao/Personalized-recommend/blob/master/re_sys/recommend/utils.py)：工具、爬虫
+- [static](https://github.com/ZainZhao/Personalized-recommend/tree/master/static) ：Web 页面静态资源
+- [templates](https://github.com/ZainZhao/Personalized-recommend/tree/master/templates) ： 为 Web 页面的 Html 页面
+- [venv](https://github.com/ZainZhao/Personalized-recommend/tree/master/templates/venv) ：Django 项目资源文件夹
+- [db.sqlite3](https://github.com/ZainZhao/Personalized-recommend/tree/master/db.sqlite3) ： Django 自带的数据库
+- [manage.py](https://github.com/ZainZhao/Personalized-recommend/tree/master/templates/manage.py) ： Django 执行脚本
 
 
 
-
-
-
-
-
+模型百度云链接：https://pan.baidu.com/s/1y03hHrEZio57xUqh33SJtA 
+提取码：6xpt 
 
 
 
@@ -57,7 +67,7 @@
 
 ### 2. 处理后的数据
 
-![1](http://github.com/ZainZhao/git-images/deep_learning/data.png?raw=true)
+![1](http://github.com/ZainZhao/git-images/raw/master/deep_learning/data.png)
 
 > 我们看到部分字段是类型性变量，如 UserID、MovieID 这样非常稀疏的变量，如果使用 `one-hot`，那么数据的维度会急剧膨胀，算法的效率也会大打折扣。
 
@@ -91,16 +101,21 @@
 ```python
 def create_user_embedding(self, uid, user_gender, user_age, user_job):
 	with tf.name_scope("user_embedding"):
-  		uid_embed_matrix = tf.Variable(tf.random_uniform([self.uid_max, self.embed_dim], -1, 1),name="uid_embed_matrix") # (6041,32)
-		uid_embed_layer = tf.nn.embedding_lookup(uid_embed_matrix, uid, name="uid_embed_layer") # (?,1,32)
-  		
-		gender_embed_matrix = tf.Variable(tf.random_uniform([self.gender_max, self.embed_dim // 2], -1, 1),name="gender_embed_matrix") # (2,16)
-		gender_embed_layer = tf.nn.embedding_lookup(gender_embed_matrix, user_gender, name="gender_embed_layer") # (?,1,16)
+  	uid_embed_matrix = tf.Variable(tf.random_uniform([self.uid_max, self.embed_dim], -1, 1),
+                                   name="uid_embed_matrix") # (6041,32)
+    uid_embed_layer = tf.nn.embedding_lookup(uid_embed_matrix, uid, name="uid_embed_layer") # (?,1,32)
+    
+		gender_embed_matrix = tf.Variable(tf.random_uniform([self.gender_max, self.embed_dim // 2], -1, 1),
+                                  name="gender_embed_matrix") # (2,16)
+		gender_embed_layer = tf.nn.embedding_lookup(gender_embed_matrix, user_gender, 
+                                                name="gender_embed_layer") # (?,1,16)
 
-		age_embed_matrix = tf.Variable(tf.random_uniform([self.age_max, self.embed_dim // 2], -1, 1),name="age_embed_matrix") # (7,16)
+		age_embed_matrix = tf.Variable(tf.random_uniform([self.age_max, self.embed_dim // 2], -1, 1),
+                               name="age_embed_matrix") # (7,16)
 		age_embed_layer = tf.nn.embedding_lookup(age_embed_matrix, user_age, name="age_embed_layer")# (?,1,16)
 
-		job_embed_matrix = tf.Variable(tf.random_uniform([self.job_max, self.embed_dim // 2], -1, 1),name="job_embed_matrix") # (21,16)
+		job_embed_matrix = tf.Variable(tf.random_uniform([self.job_max, self.embed_dim // 2], -1, 1),
+                               name="job_embed_matrix") # (21,16)
 		job_embed_layer = tf.nn.embedding_lookup(job_embed_matrix, user_job, name="job_embed_layer")# (?,1,16)
 	return uid_embed_layer, gender_embed_layer, age_embed_layer, job_embed_layer
 ```
