@@ -17,6 +17,8 @@
 - [venv](https://github.com/ZainZhao/Personalized-recommend/tree/master/venv)：Django 项目资源文件夹
 - [db.sqlite3](https://github.com/ZainZhao/Personalized-recommend/tree/master/db.sqlite3) ： Django 自带的数据库
 - [manage.py](https://github.com/ZainZhao/Personalized-recommend/blob/master/manage.py)： Django 执行脚本
+- [网络模型.vsdx](https://github.com/ZainZhao/Personalized-recommend/blob/master/%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B.vsdx)：网络模型图（visio）
+- [deep-learning-README.pdf](https://github.com/ZainZhao/Personalized-recommend/blob/master/deep-learning-README.pdf)：README的pdf版，如果github的README显示存在问题请下载这个文件
 
 
 
@@ -179,24 +181,24 @@ def create_user_embedding(self, uid, user_gender, user_age, user_job):
   使用不同尺寸的卷积核做卷积和最大池化，相关参数的变化不再赘述
 
   ```python
-  	pool_layer_lst = []
-    for window_size in self.window_sizes:
-      with tf.name_scope("movie_txt_conv_maxpool_{}".format(window_size)):
-        # 卷积核权重   
-        filter_weights = tf.Variable(tf.truncated_normal([window_size, self.embed_dim, 1, self.filter_num], stddev=0.1),name="filter_weights")  
-        
-        # 卷积核偏执   
-        filter_bias = tf.Variable(tf.constant(0.1, shape=[self.filter_num]), name="filter_bias")
+  pool_layer_lst = []
+  for window_size in self.window_sizes:
+    with tf.name_scope("movie_txt_conv_maxpool_{}".format(window_size)):
+      # 卷积核权重   
+      filter_weights = tf.Variable(tf.truncated_normal([window_size, self.embed_dim, 1, self.filter_num], stddev=0.1),name="filter_weights")  
   
-        # 卷积层  第一个参数为：输入   第二个参数为：卷积核权重   第三个参数为：步长
-        conv_layer = tf.nn.conv2d(movie_title_embed_layer_expand, filter_weights, [1, 1, 1, 1], padding="VALID",name="conv_layer")
-        
-        # 激活层  参数的shape保持不变
-        relu_layer = tf.nn.relu(tf.nn.bias_add(conv_layer, filter_bias), name="relu_layer")
+      # 卷积核偏执   
+      filter_bias = tf.Variable(tf.constant(0.1, shape=[self.filter_num]), name="filter_bias")
   
-        # 池化层  第一个参数为：输入   第二个参数为：池化窗口大小	 第三个参数为：步长    
-        maxpool_layer = tf.nn.max_pool(relu_layer, [1, self.sentences_size - window_size + 1, 1, 1],[1, 1, 1, 1],padding="VALID", name="maxpool_layer")
-       
+      # 卷积层  第一个参数为：输入   第二个参数为：卷积核权重   第三个参数为：步长
+      conv_layer = tf.nn.conv2d(movie_title_embed_layer_expand, filter_weights, [1, 1, 1, 1], padding="VALID",name="conv_layer")
+  
+      # 激活层  参数的shape保持不变
+      relu_layer = tf.nn.relu(tf.nn.bias_add(conv_layer, filter_bias), name="relu_layer")
+  
+      # 池化层  第一个参数为：输入   第二个参数为：池化窗口大小	 第三个参数为：步长    
+      maxpool_layer = tf.nn.max_pool(relu_layer, [1, self.sentences_size - window_size + 1, 1, 1],[1, 1, 1, 1],padding="VALID", name="maxpool_layer")
+  
       pool_layer_lst.append(maxpool_layer)
   
   ```
