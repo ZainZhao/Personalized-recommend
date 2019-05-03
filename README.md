@@ -386,15 +386,15 @@ train_op = optimizer.apply_gradients(gradients, global_step=global_step)
 
 <img src="https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/model_2.jpg?raw=true" width=500 />
 
-<img src="http://github.com/ZainZhao/git-images/raw/master/deep_learning/model_3.jpg?raw=true" width=500 />
+<img src="https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/model_3.jpg?raw=true" width=500 />
 
 <img src="https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/model_4.jpg?raw=true" width=500 />
 
-<img src="http://github.com/ZainZhao/git-images/raw/master/deep_learning/model_5.jpg?raw=true" width=500 />
+<img src="https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/model_5.jpg?raw=true" width=500 />
 
 <img src="https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/model_6.jpg?raw=true" width=500 />
 
-<img src="http://github.com/ZainZhao/git-images/raw/master/deep_learning/model_6.jpg?raw=true" width=500 />
+<img src="https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/model_6.jpg?raw=true" width=500 />
 
 <img src="https://github.com/ZainZhao/Personalized-recommend/blob/master/picture/model_7.jpg?raw=true" width=500 />
 
