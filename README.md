@@ -1,7 +1,5 @@
 # dl-re-movies
 
-> 大数据班 软工1608班 20165277 赵煜
-
 ## 项目简介：
 
 - [dl_re_web](https://github.com/ZainZhao/Personalized-recommend/tree/master/dl_re_web) :   Web 项目的文件夹
